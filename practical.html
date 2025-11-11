@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWAN Practical Entrepreneur | AWANink</title>
+  <link rel="stylesheet" href="./css/practical.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary">
+      <a class="logo" href="./index.html">
+        <img src="./awanlink-logo.png" alt="AWANink Logo" />
+        <div class="logo-text">
+          <strong>AWANink</strong>
+          <span>AI-Powered Automation</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#benefits">Solutions</a>
+        <a href="#proof">Results</a>
+        <a href="#cta">Get Started</a>
+        <a href="./practical-accelerator.html">
+          <button class="primary" type="button">ROI Calculator</button>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="hero">
+      <p class="section-label">AI-Powered Business Automation</p>
+      <h1>Transform Your Business Operations with Intelligent Automation</h1>
+      <p class="lead">Eliminate manual tasks, reduce errors, and scale effortlessly with our enterprise-grade automation platform. Built for modern businesses that demand precision, speed, and reliability.</p>
+      <div class="cta-row">
+        <a href="./practical-accelerator.html">
+          <button class="primary" type="button">Calculate Your ROI</button>
+        </a>
+        <button class="secondary" type="button" onclick="openDemoModal()">Watch Demo</button>
+      </div>
+    </section>
+
+    <!-- Demo Modal -->
+    <div id="demo-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); z-index: 9999; align-items: center; justify-content: center;">
+      <div style="position: relative; max-width: 900px; width: 90%; background: var(--gray-800); border-radius: 16px; padding: 2rem; border: 1px solid rgba(0, 217, 255, 0.3);">
+        <button onclick="closeDemoModal()" style="position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; color: white; font-size: 2rem; cursor: pointer; padding: 0.5rem; line-height: 1;">&times;</button>
+        <h2 style="margin-top: 0; margin-bottom: 1.5rem;">AWANink Platform Demo</h2>
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; background: #000; border-radius: 8px;">
+          <iframe id="demo-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p style="margin-top: 1.5rem; color: rgba(255, 255, 255, 0.75);">
+          See how AWANink automates complex business processes and delivers measurable ROI in months, not years.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function openDemoModal() {
+        const modal = document.getElementById('demo-modal');
+        const video = document.getElementById('demo-video');
+        video.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDemoModal() {
+        const modal = document.getElementById('demo-modal');
+        const video = document.getElementById('demo-video');
+        video.src = 'about:blank';
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeDemoModal();
+      });
+
+      document.getElementById('demo-modal')?.addEventListener('click', function(e) {
+        if (e.target === this) closeDemoModal();
+      });
+    </script>
+
+    <section class="container" id="proof">
+      <div class="metrics-bar" role="list">
+        <article class="metric" role="listitem">
+          <strong>87%</strong>
+          <span>Average reduction in manual processing time</span>
+        </article>
+        <article class="metric" role="listitem">
+          <strong>99.9%</strong>
+          <span>Accuracy rate across automated workflows</span>
+        </article>
+        <article class="metric" role="listitem">
+          <strong>3-6 months</strong>
+          <span>Typical ROI payback period</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="benefits">
+      <p class="section-label">Why Choose AWANink</p>
+      <div class="grid-3">
+        <article class="card">
+          <h3>🤖 Intelligent Automation</h3>
+          <p>AI-powered workflows that learn and adapt. Automate complex business processes across finance, HR, operations, and customer service with minimal setup.</p>
+        </article>
+        <article class="card">
+          <h3>🔒 Enterprise Security</h3>
+          <p>Bank-level encryption, SOC 2 compliance, and immutable audit trails. Your data stays secure with full regulatory compliance built-in.</p>
+        </article>
+        <article class="card">
+          <h3>📈 Seamless Scaling</h3>
+          <p>Built to grow with your business. Handle 10X volume increases without additional infrastructure or headcount. Pay only for what you use.</p>
+        </article>
+      </div>
+      <div class="cta-row" id="cta">
+        <a href="./practical-accelerator.html">
+          <button class="primary" type="button">Start Your Free Assessment</button>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 <a href="https://imjd.asia" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: none; font-weight: 600;">IMJD.ASIA</a>. All rights reserved.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+        AWANink - Professional IT automation solutions | Part of <a href="https://nagisanest.org/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">NagisaNest</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

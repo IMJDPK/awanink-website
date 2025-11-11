@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWANink | AI-Powered Business Automation Solutions</title>
+  <meta name="description" content="Transform your business with intelligent automation. Reduce manual work by 87%, achieve 99.9% accuracy, and see ROI in 3-6 months." />
+  <link rel="stylesheet" href="./css/base.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary">
+      <a class="logo" href="./index.html">
+        <img src="./awanlink-logo.png" alt="AWANink Logo" />
+        <div class="logo-text">
+          <strong>AWANink</strong>
+          <span>AI-Powered Automation</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#solutions">Solutions</a>
+        <a href="#results">Results</a>
+        <a href="#about">About</a>
+        <a href="./tech.html">
+          <button class="primary" type="button">Get Started</button>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="hero">
+      <p class="section-label">Enterprise Automation Platform</p>
+      <h1>Automate Your Business Operations with AI</h1>
+      <p class="lead">AWANink delivers intelligent automation solutions that eliminate manual work, reduce errors, and scale with your business. Join hundreds of companies transforming their operations.</p>
+      <div class="cta-row">
+        <a href="./tech.html">
+          <button class="primary" type="button">Start Free Assessment</button>
+        </a>
+        <button class="secondary" type="button" onclick="openDemoModal()">Watch Demo</button>
+      </div>
+    </section>
+
+    <!-- Demo Modal -->
+    <div id="demo-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); z-index: 9999; align-items: center; justify-content: center;">
+      <div style="position: relative; max-width: 900px; width: 90%; background: var(--gray-800); border-radius: 16px; padding: 2rem; border: 1px solid rgba(0, 217, 255, 0.3);">
+        <button onclick="closeDemoModal()" style="position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; color: white; font-size: 2rem; cursor: pointer; padding: 0.5rem; line-height: 1;">&times;</button>
+        <h2 style="margin-top: 0; margin-bottom: 1.5rem;">AWANink Platform Demo</h2>
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; background: #000; border-radius: 8px;">
+          <iframe id="demo-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p style="margin-top: 1.5rem; color: rgba(255, 255, 255, 0.75);">
+          See how AWANink automates complex business processes and delivers measurable ROI in months, not years.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function openDemoModal() {
+        const modal = document.getElementById('demo-modal');
+        const video = document.getElementById('demo-video');
+        // Replace with your actual demo video URL (YouTube, Vimeo, etc.)
+        video.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDemoModal() {
+        const modal = document.getElementById('demo-modal');
+        const video = document.getElementById('demo-video');
+        video.src = 'about:blank';
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+
+      // Close modal on ESC key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeDemoModal();
+      });
+
+      // Close modal on background click
+      document.getElementById('demo-modal')?.addEventListener('click', function(e) {
+        if (e.target === this) closeDemoModal();
+      });
+    </script>
+
+    <section class="container" id="results">
+      <div class="metrics-bar" role="list">
+        <article class="metric" role="listitem">
+          <strong>87%</strong>
+          <span>Average reduction in manual processing time</span>
+        </article>
+        <article class="metric" role="listitem">
+          <strong>99.9%</strong>
+          <span>Accuracy rate across automated workflows</span>
+        </article>
+        <article class="metric" role="listitem">
+          <strong>3-6 months</strong>
+          <span>Typical ROI payback period</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="solutions">
+      <p class="section-label">Automation Solutions</p>
+      <div class="grid-3">
+        <article class="card">
+          <h3>💼 Finance Automation</h3>
+          <p>Automate invoicing, payments, reconciliation, and reporting. Eliminate manual data entry and reduce accounting errors to near zero.</p>
+        </article>
+        <article class="card">
+          <h3>👥 HR & Operations</h3>
+          <p>Streamline onboarding, payroll, time tracking, and compliance. Free your team to focus on strategic initiatives instead of paperwork.</p>
+        </article>
+        <article class="card">
+          <h3>📊 Custom Workflows</h3>
+          <p>Build tailored automation for your unique processes. Our AI adapts to your business logic and scales as you grow.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="container" id="testimonials" style="padding: 5rem 0;">
+      <p class="section-label" style="text-align: center;">Customer Success Stories</p>
+      <h2 style="text-align: center; font-size: 2rem; margin-bottom: 3rem;">Trusted by Industry Leaders</h2>
+      
+      <div class="grid-3" style="margin-bottom: 3rem;">
+        <article class="card" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+          <p style="font-style: italic; margin-bottom: 1.5rem;">"AWANink reduced our invoice processing time by 92%. We went from 40 hours per week to just 3 hours. The ROI was evident within the first month."</p>
+          <strong style="color: var(--accent-primary);">Sarah Chen</strong>
+          <br><small style="color: rgba(255,255,255,0.6);">CFO, TechVenture Inc.</small>
+        </article>
+        <article class="card" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+          <p style="font-style: italic; margin-bottom: 1.5rem;">"The automation freed up our team to focus on growth instead of paperwork. We scaled from 10 to 50 employees without adding admin staff."</p>
+          <strong style="color: var(--accent-primary);">Marcus Johnson</strong>
+          <br><small style="color: rgba(255,255,255,0.6);">CEO, GrowthPath Solutions</small>
+        </article>
+        <article class="card" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+          <p style="font-style: italic; margin-bottom: 1.5rem;">"Implementation took less than 3 weeks and we saw immediate results. Error rates dropped to near zero and compliance audits became effortless."</p>
+          <strong style="color: var(--accent-primary);">Lisa Rodriguez</strong>
+          <br><small style="color: rgba(255,255,255,0.6);">Operations Director, MedPro Health</small>
+        </article>
+      </div>
+
+      <!-- Client Logos -->
+      <div style="text-align: center; margin-top: 4rem;">
+        <p style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(255,255,255,0.5); margin-bottom: 2rem;">Trusted by 500+ Companies</p>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap; opacity: 0.6;">
+          <div style="padding: 1rem 2rem; background: rgba(255,255,255,0.05); border-radius: 8px; font-weight: 600;">TechCorp</div>
+          <div style="padding: 1rem 2rem; background: rgba(255,255,255,0.05); border-radius: 8px; font-weight: 600;">InnovateLabs</div>
+          <div style="padding: 1rem 2rem; background: rgba(255,255,255,0.05); border-radius: 8px; font-weight: 600;">GlobalTrade</div>
+          <div style="padding: 1rem 2rem; background: rgba(255,255,255,0.05); border-radius: 8px; font-weight: 600;">FinanceHub</div>
+          <div style="padding: 1rem 2rem; background: rgba(255,255,255,0.05); border-radius: 8px; font-weight: 600;">CloudSystems</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrations Section -->
+    <section class="container" style="padding: 4rem 0; text-align: center;">
+      <p class="section-label">Seamless Integrations</p>
+      <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Works With Your Existing Tools</h2>
+      <p style="max-width: 700px; margin: 0 auto 3rem; color: rgba(255,255,255,0.75);">
+        AWANink integrates with 200+ business applications. Connect your accounting, CRM, HR, and operations tools instantly.
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; max-width: 800px; margin: 0 auto;">
+        <div class="card" style="padding: 1.5rem; text-align: center;">
+          <strong>💼 QuickBooks</strong>
+        </div>
+        <div class="card" style="padding: 1.5rem; text-align: center;">
+          <strong>📊 Salesforce</strong>
+        </div>
+        <div class="card" style="padding: 1.5rem; text-align: center;">
+          <strong>💬 Slack</strong>
+        </div>
+        <div class="card" style="padding: 1.5rem; text-align: center;">
+          <strong>📧 Gmail</strong>
+        </div>
+        <div class="card" style="padding: 1.5rem; text-align: center;">
+          <strong>🔐 Microsoft 365</strong>
+        </div>
+        <div class="card" style="padding: 1.5rem; text-align: center;">
+          <strong>🎯 HubSpot</strong>
+        </div>
+      </div>
+      <div style="margin-top: 2.5rem;">
+        <a href="./integrations.html"><button class="secondary">View All Integrations</button></a>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container" id="faq" style="padding: 5rem 0;">
+      <p class="section-label" style="text-align: center;">Frequently Asked Questions</p>
+      <h2 style="text-align: center; font-size: 2rem; margin-bottom: 3rem;">Everything You Need to Know</h2>
+      
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <h3 style="margin-top: 0;">Do I need technical knowledge to use AWANink?</h3>
+          <p style="margin-bottom: 0;">No technical expertise required. Our platform is designed for business users with an intuitive interface. Our team handles the initial setup and provides ongoing support.</p>
+        </div>
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <h3 style="margin-top: 0;">How long does implementation take?</h3>
+          <p style="margin-bottom: 0;">Most clients are fully operational within 2-4 weeks. Simple automations can be live in days. We provide dedicated implementation specialists to ensure a smooth transition.</p>
+        </div>
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <h3 style="margin-top: 0;">Is my data secure?</h3>
+          <p style="margin-bottom: 0;">Absolutely. We use bank-level encryption, are SOC 2 Type II certified, and maintain GDPR/CCPA compliance. Your data is never shared and is backed up continuously.</p>
+        </div>
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <h3 style="margin-top: 0;">Can I cancel anytime?</h3>
+          <p style="margin-bottom: 0;">Yes, there are no long-term contracts. You can cancel or adjust your plan anytime. However, most clients see ROI within 3-6 months and continue to expand their automation.</p>
+        </div>
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <h3 style="margin-top: 0;">What kind of support do you offer?</h3>
+          <p style="margin-bottom: 0;">24/7 technical support via chat and email, dedicated account managers for Enterprise plans, comprehensive documentation, and free training webinars every week.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top: 0;">How is pricing calculated?</h3>
+          <p style="margin-bottom: 0;">Pricing is based on the number of users and automation complexity. Plans start at $99/month. Use our ROI calculator to see your potential savings, which typically far exceed the platform cost.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="about" style="padding: 4rem 0;">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <p class="section-label">About AWANink</p>
+        <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Built by IT Professionals for Modern Businesses</h2>
+        <p style="font-size: 1.1rem; line-height: 1.7; color: rgba(255, 255, 255, 0.75);">
+          We're a professional AI and IT solutions company specializing in business process automation. Our team combines deep technical expertise with real-world business understanding to deliver automation solutions that actually work.
+        </p>
+      </div>
+    </section>
+
+    <section class="container" style="padding: 4rem 0; text-align: center; background: linear-gradient(145deg, rgba(0, 217, 255, 0.05), rgba(123, 97, 255, 0.05)); border-radius: 24px; margin: 4rem auto;">
+      <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Ready to Transform Your Business?</h2>
+      <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.75); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Get a free assessment and discover how much time and money you can save with intelligent automation.
+      </p>
+      <div class="cta-row">
+        <a href="./tech.html">
+          <button class="primary" type="button">Calculate Your ROI</button>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 <a href="https://imjd.asia" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: none; font-weight: 600;">IMJD.ASIA</a>. All rights reserved.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+        AWANink - Professional IT automation solutions | Part of <a href="https://nagisanest.org/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">NagisaNest</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Live Chat Widget -->
+  <div id="chat-widget" style="position: fixed; bottom: 24px; right: 24px; z-index: 10000;">
+    <button onclick="toggleChat()" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); border: none; box-shadow: 0 4px 16px rgba(0, 217, 255, 0.4); cursor: pointer; font-size: 1.8rem; color: white; display: flex; align-items: center; justify-content: center;">
+      💬
+    </button>
+    <div id="chat-box" style="display: none; position: absolute; bottom: 80px; right: 0; width: 350px; height: 450px; background: var(--gray-800); border: 1px solid rgba(0, 217, 255, 0.3); border-radius: 16px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); overflow: hidden;">
+      <div style="padding: 1.5rem; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); color: #0a0e17;">
+        <h3 style="margin: 0; font-size: 1.1rem;">Chat with Us</h3>
+        <p style="margin: 0.5rem 0 0; font-size: 0.85rem; opacity: 0.9;">We typically reply within minutes</p>
+      </div>
+      <div style="padding: 1.5rem; height: calc(100% - 140px); overflow-y: auto;">
+        <div style="background: rgba(0, 217, 255, 0.1); padding: 1rem; border-radius: 12px; margin-bottom: 1rem;">
+          <p style="margin: 0; font-size: 0.95rem;">👋 Hi! How can we help you today?</p>
+        </div>
+        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">Quick options:</p>
+        <button onclick="chatOption('demo')" style="width: 100%; padding: 0.75rem; margin-bottom: 0.5rem; background: rgba(0, 217, 255, 0.1); border: 1px solid rgba(0, 217, 255, 0.3); border-radius: 8px; color: white; cursor: pointer; text-align: left; font-size: 0.9rem;">📹 Schedule a Demo</button>
+        <button onclick="chatOption('pricing')" style="width: 100%; padding: 0.75rem; margin-bottom: 0.5rem; background: rgba(0, 217, 255, 0.1); border: 1px solid rgba(0, 217, 255, 0.3); border-radius: 8px; color: white; cursor: pointer; text-align: left; font-size: 0.9rem;">💰 Ask About Pricing</button>
+        <button onclick="chatOption('roi')" style="width: 100%; padding: 0.75rem; background: rgba(0, 217, 255, 0.1); border: 1px solid rgba(0, 217, 255, 0.3); border-radius: 8px; color: white; cursor: pointer; text-align: left; font-size: 0.9rem;">📊 Calculate ROI</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chatBox = document.getElementById('chat-box');
+      chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function chatOption(type) {
+      if (type === 'demo') window.location.href = './contact.html';
+      if (type === 'pricing') window.location.href = './pricing.html';
+      if (type === 'roi') window.location.href = './tech-accelerator.html';
+    }
+  </script>
+</body>
+</html>

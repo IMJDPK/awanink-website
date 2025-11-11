@@ -1,0 +1,28 @@
+@import url('./base.css');
+
+/* Tech variant styling - sleek and modern */
+body {
+	background: radial-gradient(ellipse at top left, rgba(0, 217, 255, 0.12), transparent 50%),
+							radial-gradient(ellipse at bottom right, rgba(123, 97, 255, 0.1), transparent 55%),
+							#0a0e17;
+}
+
+.hero h1 {
+	background: linear-gradient(135deg, #00d9ff, #7b61ff);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.card {
+	border-color: rgba(0, 217, 255, 0.25);
+}
+
+.card:hover {
+	border-color: rgba(0, 217, 255, 0.45);
+	box-shadow: 0 12px 48px rgba(0, 217, 255, 0.2);
+}
+
+.metric strong {
+	color: var(--accent-primary);
+}

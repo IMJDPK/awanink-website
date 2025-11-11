@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | AWANink</title>
+  <meta name="description" content="Get in touch with AWANink automation experts. Schedule a consultation or request a demo." />
+  <link rel="stylesheet" href="./css/base.css" />
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-form {
+      background: linear-gradient(145deg, rgba(20, 24, 36, 0.95), rgba(27, 29, 47, 0.85));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.95rem 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      background: rgba(10, 14, 23, 0.6);
+      color: var(--fg);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent-primary);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .info-card {
+      background: linear-gradient(145deg, rgba(20, 24, 36, 0.8), rgba(27, 29, 47, 0.6));
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .info-card h3 {
+      margin-top: 0;
+      color: var(--accent-primary);
+      font-size: 1.3rem;
+    }
+
+    .success-message {
+      display: none;
+      padding: 1.5rem;
+      background: rgba(0, 255, 136, 0.1);
+      border: 1px solid var(--accent-success);
+      border-radius: 8px;
+      color: var(--accent-success);
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary">
+      <a class="logo" href="./index.html">
+        <img src="./awanlink-logo.png" alt="AWANink Logo" />
+        <div class="logo-text">
+          <strong>AWANink</strong>
+          <span>AI-Powered Automation</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./index.html#solutions">Solutions</a>
+        <a href="./pricing.html">Pricing</a>
+        <a href="./tech.html">
+          <button class="primary" type="button">Get Started</button>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="section-label">Get In Touch</p>
+      <h1>Let's Automate Your Business</h1>
+      <p class="lead">Schedule a free consultation with our automation experts. We'll analyze your processes and show you how to save time and money.</p>
+    </section>
+
+    <section class="container" style="padding: 3rem 0;">
+      <div class="contact-grid">
+        <div>
+          <div class="contact-form">
+            <h2 style="margin-top: 0; margin-bottom: 1.5rem;">Send Us a Message</h2>
+            
+            <div class="success-message" id="success-message">
+              ✓ Thank you! We'll get back to you within 24 hours.
+            </div>
+
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company" />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+
+              <div class="form-group">
+                <label for="interest">I'm Interested In *</label>
+                <select id="interest" name="interest" required>
+                  <option value="">Select an option</option>
+                  <option value="demo">Schedule a Demo</option>
+                  <option value="roi">ROI Assessment</option>
+                  <option value="finance">Finance Automation</option>
+                  <option value="hr">HR Automation</option>
+                  <option value="custom">Custom Solution</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Tell Us About Your Needs</label>
+                <textarea id="message" name="message" placeholder="Describe your current challenges or automation goals..."></textarea>
+              </div>
+
+              <button type="submit" class="primary" style="width: 100%;">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <div class="info-card">
+            <h3>📞 Phone</h3>
+            <p>+1 (555) 123-4567</p>
+            <small style="color: rgba(255,255,255,0.6);">Mon-Fri, 9AM-6PM EST</small>
+          </div>
+
+          <div class="info-card">
+            <h3>✉️ Email</h3>
+            <p>sales@awanink.com</p>
+            <p>support@awanink.com</p>
+            <small style="color: rgba(255,255,255,0.6);">Response within 24 hours</small>
+          </div>
+
+          <div class="info-card">
+            <h3>💬 Live Chat</h3>
+            <p>Click the chat icon in the bottom right corner for immediate assistance.</p>
+            <small style="color: rgba(255,255,255,0.6);">Available 24/7</small>
+          </div>
+
+          <div class="info-card">
+            <h3>📍 Office</h3>
+            <p>123 Tech Plaza, Suite 400<br>San Francisco, CA 94105</p>
+            <small style="color: rgba(255,255,255,0.6);">Remote-first company</small>
+          </div>
+
+          <div class="info-card" style="background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(123, 97, 255, 0.08)); border-color: rgba(0, 217, 255, 0.3);">
+            <h3>⚡ Quick Start</h3>
+            <p style="margin-bottom: 1.5rem;">Already know what you need? Use our ROI calculator to see your savings potential.</p>
+            <a href="./tech-accelerator.html"><button class="secondary" style="width: 100%;">Calculate ROI</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 <a href="https://imjd.asia" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: none; font-weight: 600;">IMJD.ASIA</a>. All rights reserved.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+        AWANink - Professional IT automation solutions | Part of <a href="https://nagisanest.org/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">NagisaNest</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show success message
+      const successMsg = document.getElementById('success-message');
+      successMsg.style.display = 'block';
+      
+      // Reset form
+      this.reset();
+      
+      // Scroll to success message
+      successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+      }, 5000);
+      
+      // In production, you would send this data to your backend
+      // fetch('/api/contact', { method: 'POST', body: new FormData(this) });
+    });
+  </script>
+</body>
+</html>
